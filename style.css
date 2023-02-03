@@ -159,6 +159,36 @@ p {
   background-color: var(--first-color);
 }
 
+/*Progress Bar*/
+progress {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--gray-color);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--gray-color);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--gray-dark-color);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--gray-dark-color);
+}
+
+.progress {
+  margin: 1rem auto;
+}
+
+.progress > p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
 @media screen and (min-width: 1024px) {
   .menu-btn {
     display: none;
@@ -186,6 +216,10 @@ p {
 }
 
 /**************Utilities***************/
+.bg-gray-light {
+  background-color: var(--gray-light-color);
+}
+
 .box-shadow-1 {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
@@ -208,11 +242,65 @@ p {
   max-width: var(--max-width);
 }
 
+.gray-scale {
+  filter: grayscale(1);
+}
+
 .none {
   display: none;
 }
 
+.section {
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  border-top: thin solid var(--first-color);
+  border-bottom: thin solid var(--first-color);
+  width: 250px;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: var(--title-color);
+  font-style: bold;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .full-lg-screen {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+}
+
 /**************Site Styles ***********/
+.about > article {
+  margin-bottom: 2rem;
+}
+
 /*Ponemos la cabecera aqui porque puede cambiar*/
 .header {
   position: fixed;
@@ -231,6 +319,14 @@ p {
   align-items: center;
 }
 
+.imagen-foto {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  border: thick solid red;
+}
+
 .logo a {
   color: var(--first-color);
   font-weight: bold;
@@ -238,14 +334,109 @@ p {
   text-decoration: none;
 }
 
+.portfolio-card {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*para que no pierda el aspecto la imagen si es de diferente tamaño*/
+}
+
+.portfolio-card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--first-alpha-color);
+  color: var(--white-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5 ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card-info {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.portfolio-card-info > div {
+  padding: 1rem;
+  border: thin solid var(--white-color);
+  width: 100%;
+  height: 100%;
+}
+
+.service-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.service-card h3 {
+  color: var(--title-color);
+}
+
+.service-card svg {
+  fill: var(--first-color);
+  margin-bottom: 1.25rem;
+}
+
 @media screen and (min-width: 768px) {
+  .portfolio > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .portfolio .section-title {
+    grid-column: span 2;
+  }
+
+  .services > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .services .section-title {
+    grid-column: span 2;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-content: center;
+  }
   .header {
     position: sticky;
     top: 0;
     padding: 0.5rem;
     height: calc(var(--header-height) - 0.5rem);
+  }
+
+  .portfolio > .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio .section-title {
+    grid-column: span 3;
+  }
+
+  .services > .container {
+    grid-template-columns: repeat(3, 30%);
+  }
+
+  .services .section-title {
+    grid-column: span 3;
   }
 }
