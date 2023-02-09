@@ -1,12 +1,24 @@
 /**********************Custom Properties *************/
 
 :root {
+  --first-color: navy;
+  --first-alpha-color: rgba(32, 42, 68, 0.75);
+  --second-color: #d3d3d3;
+  --second-alpha-color: rgba(211, 211, 211, 0.75);
+  --third-color: navy;
+  --third-alpha-color: rgba(32, 42, 68, 0.75);
+  /*
+  --first-color: #9400d3;
+  --first-alpha-color: rgba(148, 0, 211, 0.75);
+  --second-color: #ffff66;
+  --second-alpha-color: rgba(255, 255, 102, 0.75);
+  /*
   --first-color: #d90062;
   --first-alpha-color: rgba(217, 0, 98, 0.75);
   --second-color: #14192d;
   --second-alpha-color: rgba(20, 25, 45, 0.75);
   --third-color: #501464;
-  --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --third-alpha-color: rgba(80, 20, 100, 0.75);*/
   --white-color: #fff;
   --gray-light-color: #f3f3f3;
   --gray-color: #ccc;
@@ -363,7 +375,7 @@ p {
 progress {
   width: 100%;
   height: 1rem;
-  background-color: var(--gray-color);
+  background-color: var(--white-color);
 }
 
 progress::-webkit-progress-bar {
@@ -371,11 +383,11 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: var(--gray-dark-color);
+  background-color: var(--first-color);
 }
 
 progress::-moz-progress-bar {
-  background-color: var(--gray-dark-color);
+  background-color: var(--first-color);
 }
 
 .progress {
@@ -563,7 +575,7 @@ progress::-moz-progress-bar {
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  border: thick solid red;
+  border: thick solid black;
 }
 
 .logo a {
