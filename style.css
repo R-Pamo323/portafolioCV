@@ -531,6 +531,15 @@ progress::-moz-progress-bar {
 .contact-card > small {
   margin-top: -1rem;
 }
+
+.footer {
+  margin-bottom: var(--header-height);
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--third-color);
+}
+
 /*Ponemos la cabecera aqui porque puede cambiar*/
 .header {
   position: fixed;
@@ -702,6 +711,11 @@ progress::-moz-progress-bar {
   .contact-cards {
     grid-template-columns: repeat(4, 24%);
   }
+
+  .footer {
+    margin-bottom: 0;
+  }
+
   .header {
     position: sticky;
     top: 0;
