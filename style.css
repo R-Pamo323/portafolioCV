@@ -632,6 +632,12 @@ progress::-moz-progress-bar {
   flex-direction: column;
 }
 
+.portfolio-modal img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover; /*para que no pierda el aspecto la imagen si es de diferente tamaño*/
+}
+
 .portfolio-modal h3 {
   border-bottom: medium solid var(--first-color);
   padding: 0.5rem 0;
