@@ -518,6 +518,75 @@ progress::-moz-progress-bar {
   }
 }
 
+/*******Carousel Flickity ************/
+.carousel-cliente {
+  background: var(--carousel-bg-color);
+}
+
+.carousel-cell-cliente {
+  width: 66%;
+  height: 350px;
+  margin-right: 10px;
+  background: var(--white-alpha-color);
+  border-radius: 5px;
+}
+
+/* cell number */
+.carousel-cell-cliente:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.cliente-foto {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.cliente-foto .especial {
+  padding: 13px;
+}
+
+.cliente-title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  width: 100%;
+  margin: 0;
+  padding: 25px;
+  text-align: center;
+}
+
+.hero-image-fondo {
+  background-image: url("assets/hero-image-customers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /*para que no scrolle*/
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white-alpha-color);
+}
+
+.hero-image-opacity_2 {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white-alpha-color);
+}
+
+.flickity-page-dots .dot {
+  background: var(--first-color);
+}
+
 /**************Site Styles ***********/
 .about > article {
   margin-bottom: 2rem;

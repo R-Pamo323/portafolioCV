@@ -1,7 +1,7 @@
 # Portafolio CV
 
-Repositorio de Proyectos del Taller de Maquetación
+Repositorio de Proyectos de Rodrigo Pamo
 
 # Proyecto CV
 
-- [Landing Page de tipo Portafolio-CV](https://r-pamo323.github.io/portafolioCV/)
+- [Portafolio-CV](https://r-pamo323.github.io/portafolioCV/)
